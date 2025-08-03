@@ -1,0 +1,3 @@
+pip is the package manager for python 
+you can use pip to install a moduleon your system
+for example: In modules.py we used pip to install and import pyjokes
