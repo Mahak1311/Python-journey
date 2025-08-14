@@ -2,7 +2,7 @@
 value = input("Enter value in either inch or cm: ")
 def convert(value):
   if "inch" in value:
-    num = float(value.replace("inch", "").strip()) #replaced inch 
+    num = float(value.replace("inch", "").strip()) #replaced inch with space coz when multiplying python needs only numbers and not words
     return 2.5 * num
 
   elif "cm" in value:
