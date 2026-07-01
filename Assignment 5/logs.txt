@@ -1,0 +1,4 @@
+this is a log file
+for assignment 5
+
+Program runs successfully! 
