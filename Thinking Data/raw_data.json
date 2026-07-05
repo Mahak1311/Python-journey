@@ -1,0 +1,9 @@
+[
+    {"user":"Rahul", "movie":"Inception", "watch_time":"120", "subscription":"Premium"},
+    {"user":"Priya", "movie":"Wednesday", "watch_time":"two hundred", "subscription":"Basic"},
+    {"user":"Aman", "movie":"Dark", "watch_time":"45", "subscription":"Premium"},
+    {"user":"Sneha", "movie":"Stranger Things", "watch_time":"180", "subscription":"premium"},
+    {"user":"Riya", "movie":"Money Heist", "watch_time":"", "subscription":"Basic"},
+    {"user":"Kabir", "movie":"Dark", "watch_time":"45", "subscription":"Premium"},
+    {"user":"Kabir", "movie":"Dark", "watch_time":"45", "subscription":"Premium"}
+]
