@@ -53,5 +53,24 @@ FROM customers c
 RIGHT JOIN orders o 
 ON c.customer_id=o.customer_id;
 
+-- Outer join- Union of left join and right join
+SELECT *
+FROM customers c
+LEFT JOIN orders o
+ON c.customer_id=o.customer_id
+UNION
+SELECT *
+FROM customers c
+RIGHT JOIN orders o
+ON c.customer_id=o.customer_id;
 
+-- Cross join- matches every data of table a to every data of table b
+SELECT *
+FROM customers
+CROSS JOIN orders;
 
+-- Self join- kinda like inner join,works like regular join on same table
+SELECT *
+FROM customers as A
+JOIN customers as B
+ON A.customer_id=B.customer_id;
