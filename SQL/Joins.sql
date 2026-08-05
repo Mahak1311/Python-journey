@@ -74,3 +74,48 @@ SELECT *
 FROM customers as A
 JOIN customers as B
 ON A.customer_id=B.customer_id;
+
+-- Left exclusive join - left table values without values that are comman in both left and right table
+SELECT *
+FROM customers as A
+LEFT JOIN orders as B
+ON A.customer_id=B.customer_id
+WHERE B.customer_id is NULL;
+
+-- Right join- right table without common values present in both left and right table
+SELECT *
+FROM customers as A
+RIGHT JOIN orders as B
+ON A.customer_id=B.customer_id
+WHERE A.customer_id is NULL;
+
+-- Sub queries- Inner queries are nested query can be written in 3 ways: with WHERE , with FROM , with SELECT
+SELECT *
+FROM orders
+WHERE amount >(
+	SELECT AVG(amount)
+	FROM orders
+    );
+    
+-- Sub query with SELECT
+SELECT name,
+(
+	SELECT COUNT(*)
+	FROM orders o
+	WHERE o.customer_id=c.customer_id
+    ) as order_count
+FROM customers c;
+
+-- Sub query with FROM
+SELECT 
+ summary.customer_id,
+ summary.avg_amount
+FROM
+(
+	SELECT 
+		customer_id,
+		AVG(amount) AS avg_amount
+	FROM orders
+	GROUP BY customer_id
+)
+AS summary;  
